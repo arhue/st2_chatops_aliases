@@ -1,7 +1,7 @@
 ---
-name: chatops.mysql_processlist
-action_ref: st2_chatops_aliases.mysql_processlist
-description: Show MySQL processlist
+name: chatops.top
+action_ref: st2_chatops_aliases.top
+description: Show top processes
 formats:
   - display: "show top <hosts=db>"
     representation:
