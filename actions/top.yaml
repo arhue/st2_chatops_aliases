@@ -15,7 +15,7 @@ parameters:
     description: "Command to run"
     type: string
     immutable: true
-    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"top -n 10\""
+    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"top -n 1\""
   hosts:
     description: "Ansible hosts"
     type: string
