@@ -1,7 +1,7 @@
 # Make sure you have ansible inventory file `/etc/ansible/hosts` configured
 ---
-name: package_version
-description: Show installed package version on hosts
+name: top
+description: Show top
 runner_type: local-shell-cmd
 entry_point: ""
 enabled: true
@@ -15,12 +15,8 @@ parameters:
     description: "Command to run"
     type: string
     immutable: true
-    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} -m shell -a \"dpkg -s {{ package }} | grep 'Version' | sed 's/^Version: //'\""
+    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"top -n 10\""
   hosts:
     description: "Ansible hosts"
     type: string
-    required: true
-  package:
-    description: "Package name"
-    type: string
-    required: true
+    default: db
