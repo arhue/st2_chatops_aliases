@@ -1,0 +1,12 @@
+---
+name: chatops.toptalkers-period
+action_ref: st2_chatops_aliases.toptalkers-period
+description: Show top processes
+formats:
+  - display: "show top-talkers <hours=24>"
+    representation:
+      - "show top-talkers {{ hours=24 }}"
+result:
+  format: |
+    Here is top for `{{ execution.parameters.hours }}` hour(s): {~}
+    ```{{ execution.result.stdout }}```
