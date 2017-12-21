@@ -10,11 +10,10 @@ formats:
 result:
   format: |
     {% if execution.status == 'succeeded' %}top on {{ execution.parameters.hosts }}: 
-    /code
-    {{ execution.result.stdout }}
+    /code {{ execution.result.stdout }}
 
     {~}{% else %}
-    *Exit Code:* {{ execution.result.return_code }}
-    *Stderr:* {{ execution.result.stderr }}
-    *Stdout:* {{ execution.result.stdout }}
+    *Exit Code:* /code {{ execution.result.return_code }}
+    *Stderr:* /code {{ execution.result.stderr }}
+    *Stdout:* /code {{ execution.result.stdout }}
     {% endif %}
