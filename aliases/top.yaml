@@ -7,6 +7,9 @@ formats:
     representation:
       - "show top {{ hosts=db }}"
       - "show top on {{ hosts=db }}"
+ack:
+  format: "(salute)"
+  append_url: false
 result:
   format: |
     Here is top for `{{ execution.parameters.hosts }}` host(s): {~}
