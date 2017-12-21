@@ -19,4 +19,9 @@ parameters:
   hosts:
     description: "Ansible hosts"
     type: string
-    default: db
+    default: nfsen1
+  hours:
+    description: "Time period in hours"
+    type: string
+    required: true
+    default: 24
