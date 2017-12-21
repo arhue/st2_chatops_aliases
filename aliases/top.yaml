@@ -9,8 +9,5 @@ formats:
       - "show top on {{ hosts=db }}"
 result:
   format: |
-    {% if execution.status == 'succeeded' %}top on `{{ execution.parameters.hosts }}`: ```{{ execution.result.stdout }}```{~}{% else %}
-    *Exit Code:* `{{ execution.result.return_code }}`
-    *Stderr:* ```{{ execution.result.stderr }}```
-    *Stdout:* ```{{ execution.result.stdout }}```
-    {% endif %}
+    Here is top for `{{ execution.parameters.hosts }}` host(s): {~}
+    ```{{ execution.result.stdout }}```
