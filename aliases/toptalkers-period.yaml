@@ -3,7 +3,7 @@ name: chatops.toptalkers-period
 action_ref: st2_chatops_aliases.toptalkers-period
 description: Show top processes
 formats:
-  - display: "show top-talkers <hours=24>"
+  - display: "show top-talkers <hours=24> <subnet=all>"
     representation:
       - "show top-talkers {{ hours=24 }} {{ subnet=all }}"
 result:
