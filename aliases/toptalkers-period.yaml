@@ -5,8 +5,8 @@ description: Show top processes
 formats:
   - display: "show top-talkers <hours=24>"
     representation:
-      - "show top-talkers {{ hours=24 }}"
+      - "show top-talkers {{ hours=24 }} {{ subnet=all }}"
 result:
   format: |
-    Here is top for `{{ execution.parameters.hours }}` hour(s): {~}
+    Here are top talkers for `{{ execution.parameters.subnet }}` subnet  for `{{ execution.parameters.hours }}` hour(s): {~}
     ```{{ execution.result.stdout }}```

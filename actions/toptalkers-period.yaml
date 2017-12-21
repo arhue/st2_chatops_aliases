@@ -15,7 +15,7 @@ parameters:
     description: "Command to run"
     type: string
     immutable: true
-    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible nfsen1 --become --become-user=root -m shell -a \"/root/product-dev/nfsen/toptalkers-period.sh {{hours}}\""
+    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible nfsen1 --become --become-user=root -m shell -a \"/root/product-dev/nfsen/toptalkers-period.sh {{hours}} {{{subnet}}\""
   hosts:
     description: "Ansible hosts"
     type: string
@@ -25,3 +25,8 @@ parameters:
     type: string
     required: true
     default: 24
+  subnet:
+    description: "Subnet you want to search"
+    type: string
+    required: true
+    default: all
