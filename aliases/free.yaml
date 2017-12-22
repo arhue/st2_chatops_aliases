@@ -1,0 +1,13 @@
+---
+name: chatops.free
+action_ref: st2_chatops_aliases.free
+description: Show top processes
+formats:
+  - display: "show free <hosts>"
+    representation:
+      - "show free {{ hosts }}"
+      - "show free on {{ hosts }}"
+result:
+  format: |
+    Here is free for `{{ execution.parameters.hosts }}` host(s): {~}
+    ```{{ execution.result.stdout }}```
