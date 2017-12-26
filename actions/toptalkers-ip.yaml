@@ -15,7 +15,7 @@ parameters:
     description: "Command to run"
     type: string
     immutable: true
-    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible nfsen1 --become --become-user=root -m shell -a \"/root/product-dev/nfsen/toptalkers-period.sh {{hours}} {{ip}}\""
+    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible nfsen1 --become --become-user=root -m shell -a \"/root/product-dev/nfsen/topip-period.sh {{hours}} {{ip}}\""
   hosts:
     description: "Ansible hosts"
     type: string
