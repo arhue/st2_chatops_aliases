@@ -1,0 +1,12 @@
+---
+name: chatops.toptalkers-ip
+action_ref: st2_chatops_aliases.toptalkers-ip
+description: Show top processes
+formats:
+  - display: "show top-ip <hours=24> <ip>"
+    representation:
+      - "show top-ip {{ hours=24 }} {{ ip }}"
+result:
+  format: |
+    Consumption for `{{ execution.parameters.ip }}` IP  for `{{ execution.parameters.hours }}` hour(s): {~}
+    ```{{ execution.result.stdout }}```
