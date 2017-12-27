@@ -15,7 +15,7 @@ parameters:
     description: "Command to run"
     type: string
     immutable: true
-    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"iftop -t -s {{seconds}} -n -P > log.txt && cat log.txt\""
+    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"iftop -t -s {{seconds}} -n -P -N -L 5 > log.txt && cat log.txt\""
   seconds:
     description: "Seconds"
     type: string
