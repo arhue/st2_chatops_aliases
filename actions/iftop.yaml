@@ -6,7 +6,7 @@ runner_type: local-shell-cmd
 entry_point: ""
 enabled: true
 parameters:
-  sudoss
+  sudo:
     immutable: true
     default: true
   kwarg_op:
