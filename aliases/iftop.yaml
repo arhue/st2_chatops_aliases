@@ -1,0 +1,13 @@
+---
+name: chatops.iftop
+action_ref: st2_chatops_aliases.iftop
+description: Show iftop processes
+formats:
+  - display: "show iftop <hosts> <seconds=10>"
+    representation:
+      - "show iftop {{ seconds=10 }}"
+      - "show iftop on {{ seconds=10 }}"
+result:
+  format: |
+    Iftop for `{{ execution.parameters.hosts }}` for `{{ execution.parameters.seconds }}` second(s): {~}
+    ```{{ execution.result.stdout }}```

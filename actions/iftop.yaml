@@ -1,0 +1,22 @@
+# Make sure you have ansible inventory file `/etc/ansible/hosts` configured
+---
+name: iftop
+description: Show iftop
+runner_type: local-shell-cmd
+entry_point: ""
+enabled: true
+parameters:
+  sudoss
+    immutable: true
+    default: true
+  kwarg_op:
+    immutable: true
+  cmd:
+    description: "Command to run"
+    type: string
+    immutable: true
+    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"iftop -t -s {{seconds}} -n -P > log.txt && cat log.txt\""
+  seconds:
+    description: "Seconds"
+    type: string
+    default: 10
