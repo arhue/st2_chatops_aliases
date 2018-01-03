@@ -1,0 +1,12 @@
+---
+name: chatops.ip4
+action_ref: st2_chatops_aliases.ip4
+description: Show public IPv4 address
+formats:
+  - display: "show ip 4 <hosts>"
+    representation:
+      - "show ip 4 {{ hosts }}"
+result:
+  format: |
+    IPv4 address for `{{ execution.parameters.hosts }}` : {~}
+    ```{{ execution.result.stdout }}```
