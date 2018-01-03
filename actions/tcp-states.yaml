@@ -15,7 +15,7 @@ parameters:
     description: "Command to run"
     type: string
     immutable: true
-    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"ss -tan | grep -v State | awk '{print \$1}' | sort | uniq -c | sed 's/^[ \t]*//'\""
+    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"ss -tan | grep -v State | awk '{print \\\$1}' | sort | uniq -c | sed 's/^[ \t]*//'\""
   hosts:
     description: "Ansible hosts"
     type: string
