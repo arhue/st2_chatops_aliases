@@ -1,0 +1,12 @@
+---
+name: chatops.tcp-states
+action_ref: st2_chatops_aliases.tcp-states
+description: Show tcp states
+formats:
+  - display: "show tcp-states <hosts>"
+    representation:
+      - "show tcp-states {{ hosts }}"
+result:
+  format: |
+    tcp-states for `{{ execution.parameters.hosts }}` : {~}
+    ```{{ execution.result.stdout }}```
