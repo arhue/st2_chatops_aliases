@@ -1,0 +1,12 @@
+---
+name: chatops.non-deleted
+action_ref: st2_chatops_aliases.non-deleted
+description: List iptables rules
+formats:
+  - display: "show non-deleted <hosts>"
+    representation:
+      - "show non-deleted {{ hosts }}"
+result:
+  format: |
+    Files deleted but still on disk for `{{ execution.parameters.hosts }}` : {~}
+    ```{{ execution.result.stdout }}```

@@ -8,5 +8,5 @@ formats:
       - "do clear-cache {{ hosts }}"
 result:
   format: |
-    Iptables rules for `{{ execution.parameters.hosts }}` : {~}
+    Cache cleared for `{{ execution.parameters.hosts }}` : {~}
     ```{{ execution.result.stdout }}```
