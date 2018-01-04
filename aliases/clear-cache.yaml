@@ -1,0 +1,12 @@
+---
+name: chatops.clear-cache
+action_ref: st2_chatops_aliases.clear-cache
+description: List iptables rules
+formats:
+  - display: "do clear-cache <hosts>"
+    representation:
+      - "do clear-cache {{ hosts }}"
+result:
+  format: |
+    Iptables rules for `{{ execution.parameters.hosts }}` : {~}
+    ```{{ execution.result.stdout }}```
