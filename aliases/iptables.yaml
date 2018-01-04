@@ -1,0 +1,12 @@
+---
+name: chatops.iptables
+action_ref: st2_chatops_aliases.iptables
+description: List iptables rules
+formats:
+  - display: "show iptables <hosts>"
+    representation:
+      - "show iptables {{ hosts }}"
+result:
+  format: |
+    Iptables rules for `{{ execution.parameters.hosts }}` : {~}
+    ```{{ execution.result.stdout }}```
