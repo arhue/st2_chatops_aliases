@@ -1,0 +1,12 @@
+---
+name: chatops.disk
+action_ref: st2_chatops_aliases.disk
+description: List disk diagnostics
+formats:
+  - display: "show disk <hosts>"
+    representation:
+      - "show disk {{ hosts }}"
+result:
+  format: |
+    Disk diagnostics for `{{ execution.parameters.hosts }}` : {~}
+    ```{{ execution.result.stdout }}```
