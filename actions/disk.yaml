@@ -15,7 +15,7 @@ parameters:
     description: "Command to run"
     type: string
     immutable: true
-    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"echo \"df -h:\"; df -h; echo \" \"; echo \"Top 5 directories are:\"; du -Sh | sort -rh | head -5\""
+    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"echo \\\"df -h:\\\"; df -h; echo \\\" \\\"; echo \\\"Top 5 directories are:\\\"; du -Sh | sort -rh | head -5\""
   hosts:
     description: "Ansible hosts"
     type: string
