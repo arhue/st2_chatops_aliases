@@ -1,9 +1,9 @@
 ---
-name: chatops.zabbix-agent
-action_ref: st2_chatops_aliases.zabbix-agent
-description: zabbix-agent
+name: chatops.zabbix
+action_ref: st2_chatops_aliases.zabbix
+description: zabbix
 formats:
-  - display: "do zabbix-agent <process=status> <project=instantpay> <hosts=web> "
+  - display: "do zabbix <process=status> <project=instantpay> <hosts=web> "
     representation:
       - "do nginx {{ process }} {{ project }} {{ hosts=web }}"
 result:

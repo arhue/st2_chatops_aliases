@@ -1,9 +1,9 @@
 ---
-name: chatops.php7.0-fpm
-action_ref: st2_chatops_aliases.php7.0-fpm
-description: php7.0-fpm
+name: chatops.php
+action_ref: st2_chatops_aliases.php
+description: php
 formats:
-  - display: "do php7.0-fpm <process=status> <project=instantpay> <hosts=web> "
+  - display: "do php <process=status> <project=instantpay> <hosts=web> "
     representation:
       - "do nginx {{ process }} {{ project }} {{ hosts=web }}"
 result:

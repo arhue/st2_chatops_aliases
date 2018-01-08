@@ -1,6 +1,6 @@
 ---
-name: php7.0-fpm.yaml
-description: Show php7.0-fpm
+name: php.yaml
+description: Show php
 runner_type: local-shell-cmd
 entry_point: ""
 enabled: true

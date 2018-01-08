@@ -1,6 +1,6 @@
 ---
-name: zabbix-agent.yaml
-description: Show zabbix-agent
+name: zabbix.yaml
+description: Show zabbix
 runner_type: local-shell-cmd
 entry_point: ""
 enabled: true
