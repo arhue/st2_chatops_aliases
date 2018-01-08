@@ -1,0 +1,29 @@
+---
+name: php7.0-fpm.yaml
+description: Show php7.0-fpm
+runner_type: local-shell-cmd
+entry_point: ""
+enabled: true
+parameters:
+  sudo:
+    immutable: true
+    default: true
+  kwarg_op:
+    immutable: true
+  cmd:
+    description: "Command to run"
+    type: string
+    immutable: true
+    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{project}}_{{hosts}} --become --become-user=root -m shell -a \"sudo service php7.0-fpm {{process}}\""
+  hosts:
+    description: "Ansible hosts"
+    type: string
+    default: web
+  project:
+    description: "Chatops project"
+    type: string
+    default: instantpay
+  process:
+    description: "Chatops process"
+    type: string
+    default: status

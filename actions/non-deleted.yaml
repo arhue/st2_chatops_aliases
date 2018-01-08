@@ -15,7 +15,7 @@ parameters:
     description: "Command to run"
     type: string
     immutable: true
-    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"lsof -nP | grep '(deleted)'\""
+    default: "/opt/stackstorm/virtualenvs/ansible/bin/ansible {{hosts|replace('http://','')}} --become --become-user=root -m shell -a \"sudo lsof -nP | grep '(deleted)'\""
   hosts:
     description: "Ansible hosts"
     type: string
