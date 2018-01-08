@@ -1,5 +1,5 @@
 ---
-name: zabbix.yaml
+name: zabbix
 description: Show zabbix
 runner_type: local-shell-cmd
 entry_point: ""

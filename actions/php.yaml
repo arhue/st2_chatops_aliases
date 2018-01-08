@@ -1,5 +1,5 @@
 ---
-name: php.yaml
+name: php
 description: Show php
 runner_type: local-shell-cmd
 entry_point: ""

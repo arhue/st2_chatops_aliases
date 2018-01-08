@@ -1,5 +1,5 @@
 ---
-name: racoon.yaml
+name: racoon
 description: Show racoon
 runner_type: local-shell-cmd
 entry_point: ""

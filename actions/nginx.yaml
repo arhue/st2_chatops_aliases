@@ -1,5 +1,5 @@
 ---
-name: nginx.yaml
+name: nginx
 description: Show nginx
 runner_type: local-shell-cmd
 entry_point: ""

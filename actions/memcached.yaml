@@ -1,5 +1,5 @@
 ---
-name: memcached.yaml
+name: memcached
 description: Show memcached
 runner_type: local-shell-cmd
 entry_point: ""
