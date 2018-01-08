@@ -3,9 +3,9 @@ name: chatops.memcached
 action_ref: st2_chatops_aliases.memcached
 description: memcached
 formats:
-  - display: "do memcached <process=status> <project=instantpay> <hosts=web> "
+  - display: "do memcached <process=status> <project=instantpay> <hosts=web>"
     representation:
-      - "do nginx {{ process }} {{ project }} {{ hosts=web }}"
+      - "do memcached {{ process }} {{ project }} {{ hosts=web }}"
 result:
   format: |
     Here is top for `{{ execution.parameters.hosts }}` host(s): {~}

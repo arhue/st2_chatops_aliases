@@ -3,9 +3,9 @@ name: chatops.racoon
 action_ref: st2_chatops_aliases.racoon
 description: racoon
 formats:
-  - display: "do racoon <process=status> <project=instantpay> <hosts=web> "
+  - display: "do racoon <process=status> <project=instantpay> <hosts=web>"
     representation:
-      - "do nginx {{ process }} {{ project }} {{ hosts=web }}"
+      - "do racoon {{ process }} {{ project }} {{ hosts=web }}"
 result:
   format: |
     Here is top for `{{ execution.parameters.hosts }}` host(s): {~}

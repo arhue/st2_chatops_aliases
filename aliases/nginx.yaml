@@ -3,7 +3,7 @@ name: chatops.nginx
 action_ref: st2_chatops_aliases.nginx
 description: nginx
 formats:
-  - display: "do nginx <process=status> <project=instantpay> <hosts=web> "
+  - display: "do nginx <process=status> <project=instantpay> <hosts=web>"
     representation:
       - "do nginx {{ process }} {{ project }} {{ hosts=web }}"
 result:

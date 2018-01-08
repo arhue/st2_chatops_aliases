@@ -3,9 +3,9 @@ name: chatops.php
 action_ref: st2_chatops_aliases.php
 description: php
 formats:
-  - display: "do php <process=status> <project=instantpay> <hosts=web> "
+  - display: "do php <process=status> <project=instantpay> <hosts=web>"
     representation:
-      - "do nginx {{ process }} {{ project }} {{ hosts=web }}"
+      - "do php {{ process }} {{ project }} {{ hosts=web }}"
 result:
   format: |
     Here is top for `{{ execution.parameters.hosts }}` host(s): {~}

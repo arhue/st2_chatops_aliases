@@ -3,9 +3,9 @@ name: chatops.zabbix
 action_ref: st2_chatops_aliases.zabbix
 description: zabbix
 formats:
-  - display: "do zabbix <process=status> <project=instantpay> <hosts=web> "
+  - display: "do zabbix <process=status> <project=instantpay> <hosts=web>"
     representation:
-      - "do nginx {{ process }} {{ project }} {{ hosts=web }}"
+      - "do zabbix {{ process }} {{ project }} {{ hosts=web }}"
 result:
   format: |
     Here is top for `{{ execution.parameters.hosts }}` host(s): {~}
